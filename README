@@ -1,15 +1,13 @@
-This is a complement of session files.
+This is a complement of php session files.
 
-When you starts an activity thorugh ajax request and you want get info of this activity via ajax, 
-the subsequents requests are blocked waiting for first request finish.
+When you starts an activity through ajax request and you want get info of this activity via ajax, the subsequents requests are blocked waiting for first request finish.
 
-You need to stop the use of php session file to serve more ajax request.
+For that you need to finish use of php session file to serve more ajax request.
 
 Sample of use:
 
 Status.php
 ==========
-
 <?php
     if (isset($_REQUEST['sid'])) session_id($_REQUEST['sid']);
     session_start();
@@ -28,8 +26,7 @@ Status.php
                         "p"  => $mysession->readKey($id),
                         "id" => $id,
          )));
-    
-        
+   
 ?>
 
 
@@ -47,8 +44,6 @@ function process_demo(){
 
     $mysession = new MySession( session_id() );
     
-    $app->contentType("text/html");
-    
     $mysession->writeKey($id, 0);
     
     // relase php session for calls from requester stay attended
@@ -59,15 +54,15 @@ function process_demo(){
     // indicates that finishes the long action
     $mysession->writeKey($id, "OK");
     
-    die();    
+        
 }
 
 ?>
 
 
-
-In index.php from Slim major index add:
-
+For SlimFramework developpers.
+------------------------------
+Add in root index.php this require:
 
 // MySession
 require './app/others/MySession/MySession.php';  
