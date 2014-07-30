@@ -1,9 +1,9 @@
 This is a complement of session files.
 
-When you starts an activity thorugh ajax request and you want get info of this activity via ajax, 
-the subsequents requests are blocked waiting for first request finish.
+When you start an activity through ajax request and you want to get info of this activity via ajax, 
+the subsequents requests are blocked waiting for the termination of the first request.
 
-You need to stop the use of php session file to serve more ajax request.
+You need to stop using php's session file to serve more ajax request.
 
 Sample of use:
 
@@ -66,7 +66,7 @@ function process_demo(){
 
 
 
-In index.php from Slim major index add:
+In index.php bootstrap in SlimFramework project add:
 
 
 // MySession
