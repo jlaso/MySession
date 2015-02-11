@@ -1,5 +1,7 @@
 This is a complement of session files.
 
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/5ff17624-3b87-4b7a-b3e4-6a93a18bdd2d/big.png)](https://insight.sensiolabs.com/projects/5ff17624-3b87-4b7a-b3e4-6a93a18bdd2d)
+
 When you start an activity through ajax request and you want to get info of this activity via ajax, 
 the subsequents requests are blocked waiting for the termination of the first request.
 
